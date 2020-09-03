@@ -1,0 +1,144 @@
+2020-09-02 11:05:01,640 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 23, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 11, in send_email
+    mail.send(msg)
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Python\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python\lib\smtplib.py", line 338, in connect
+    (code, msg) = self.getreply()
+  File "C:\Python\lib\smtplib.py", line 394, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2020-09-02 11:08:34,502 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 11:08:43,034 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 24, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 10, in send_email
+    print("mail_port" + app.config["MAIL_USE_SSL"])
+KeyError: 'MAIL_USE_SSL'
+2020-09-02 11:09:21,486 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 11:09:28,470 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 24, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 10, in send_email
+    print("mail_port" + app.config['MAIL_USE_SSL'])
+KeyError: 'MAIL_USE_SSL'
+2020-09-02 11:10:15,486 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 11:10:27,996 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 24, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 11, in send_email
+    print("mail_use_ssl" + app.config['MAIL_USE_SSL'])
+KeyError: 'MAIL_USE_SSL'
+2020-09-02 11:11:13,063 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 11:11:26,542 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 25, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 11, in send_email
+    print("mail_port" + app.config['MAIL_USE_SSL'])
+KeyError: 'MAIL_USE_SSL'
+2020-09-02 11:12:21,775 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 11:12:28,351 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 26, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 11, in send_email
+    print("mail_port" + app.config['MAIL_USE_SSL'])
+KeyError: 'MAIL_USE_SSL'
+2020-09-02 11:13:01,847 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]

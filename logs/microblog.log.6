@@ -1,0 +1,143 @@
+2020-09-01 14:23:36,380 ERROR: Exception on / [GET] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1947, in full_dispatch_request
+    rv = self.preprocess_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2241, in preprocess_request
+    rv = func()
+  File "C:\matea\microblog\app\routes.py", line 23, in before_request
+    if current_user.is_authenticated:
+  File "c:\matea\microblog\venv\lib\site-packages\werkzeug\local.py", line 348, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "c:\matea\microblog\venv\lib\site-packages\werkzeug\local.py", line 307, in _get_current_object
+    return self.__local()
+  File "c:\matea\microblog\venv\lib\site-packages\flask_login\utils.py", line 26, in <lambda>
+    current_user = LocalProxy(lambda: _get_user())
+  File "c:\matea\microblog\venv\lib\site-packages\flask_login\utils.py", line 346, in _get_user
+    current_app.login_manager._load_user()
+  File "c:\matea\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 318, in _load_user
+    user = self._user_callback(user_id)
+  File "C:\matea\microblog\app\models.py", line 21, in load_user
+    return User.query.get(int(id))
+  File "c:\matea\microblog\venv\lib\site-packages\flask_sqlalchemy\__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 451, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\base.py", line 430, in _inspect_mapped_class
+    mapper._configure_all()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1353, in _configure_all
+    configure_mappers()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 3301, in configure_mappers
+    mapper._post_configure_properties()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\mapper.py", line 1966, in _post_configure_properties
+    prop.init()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\interfaces.py", line 197, in init
+    self.do_init()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2076, in do_init
+    self._process_dependent_arguments()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2138, in _process_dependent_arguments
+    self.target = self.entity.persist_selectable
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 883, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\orm\relationships.py", line 2043, in entity
+    argument = self.argument()
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 311, in _resolve_name
+    rval = d[token]
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\util\_collections.py", line 729, in __missing__
+    self[key] = val = self.creator(key)
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 273, in _access_cls
+    return _determine_container(key, cls._decl_class_registry[key])
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 257, in _determine_container
+    value = value.attempt_get([], key)
+  File "c:\matea\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\clsregistry.py", line 97, in attempt_get
+    % (".".join(path + [key]))
+sqlalchemy.exc.InvalidRequestError: Multiple classes found for path "User" in the registry of this declarative base. Please use a fully module-qualified path.
+2020-09-02 08:31:26,995 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:33:42,254 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:41:15,154 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:41:20,969 ERROR: Exception on /favicon.ico [GET] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1925, in dispatch_request
+    self.raise_routing_exception(req)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1907, in raise_routing_exception
+    raise request.routing_exception
+  File "c:\matea\microblog\venv\lib\site-packages\flask\ctx.py", line 350, in match_request
+    result = self.url_adapter.match(return_rule=True)
+  File "c:\matea\microblog\venv\lib\site-packages\werkzeug\routing.py", line 1799, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1815, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1743, in handle_http_exception
+    return handler(e)
+  File "C:\matea\microblog\app\errors.py", line 6, in not_found_error
+    return render_template('404 html'), 404
+  File "c:\matea\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\matea\microblog\venv\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\matea\microblog\venv\lib\site-packages\jinja2\environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\matea\microblog\venv\lib\site-packages\jinja2\environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\matea\microblog\venv\lib\site-packages\jinja2\loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404 html
+2020-09-02 08:47:21,972 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:51:02,899 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:52:24,182 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
+2020-09-02 08:52:43,338 ERROR: Exception on /reset_password_request [POST] [in c:\matea\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\matea\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\matea\microblog\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\matea\microblog\app\routes.py", line 188, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\matea\microblog\app\email.py", line 22, in send_password_reset_email
+    user=user, token=token))
+  File "C:\matea\microblog\app\email.py", line 10, in send_email
+    mail.send(msg)
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "c:\matea\microblog\venv\lib\site-packages\flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "C:\Python\lib\smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Python\lib\smtplib.py", line 338, in connect
+    (code, msg) = self.getreply()
+  File "C:\Python\lib\smtplib.py", line 394, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+2020-09-02 08:55:20,866 INFO: Microblog startup [in C:\matea\microblog\app\__init__.py:51]
