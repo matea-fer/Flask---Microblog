@@ -16,3 +16,4 @@ class Config(object):
     ADMINS = ['matea.zadar95@gmail.com']
     POSTS_PER_PAGE = 3
     LANGUAGES = ['en', 'es']
+    MS_TRANSLATOR_KEY='af0b113076c848d4b0ce583c8acd503c'
