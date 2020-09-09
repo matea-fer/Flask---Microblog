@@ -6,14 +6,14 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir,'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    MAIL_SERVER = 'smtp.gmail.com'
-    MAIL_PORT = 465
+    MAIL_SERVER = os.environ.get('MAIL_SERVER')
+    MAIL_PORT = os.environ.get('MAIL_PORT')
     #MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
-    MAIL_USERNAME = 'matea.zadar95@gmail.com'
-    MAIL_PASSWORD = 'lopticaskocica1'
-    ADMINS = ['matea.zadar95@gmail.com']
+    MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+    MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+    ADMINS = os.environ.get('MAIL_USERNAME')
     POSTS_PER_PAGE = 3
     LANGUAGES = ['en', 'es']
-    MS_TRANSLATOR_KEY='af0b113076c848d4b0ce583c8acd503c'
+    MS_TRANSLATOR_KEY=os.environ.get('MS_TRANSLATOR_KEY')
