@@ -1,12 +1,12 @@
 import os, requests, uuid, json
 from flask_babel import _
-from app import app
+from app import current_app
 
 
 def translate(text, dest_language):
     print('text:', text)
-    if 'MS_TRANSLATOR_KEY' not in app.config or \
-            not app.config['MS_TRANSLATOR_KEY']:
+    if 'MS_TRANSLATOR_KEY' not in current_app.config or \
+            not current_app.config['MS_TRANSLATOR_KEY']:
         return _("The translation service is not configured.")
 
     body = [{
