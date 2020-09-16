@@ -7,3 +7,4 @@ MAIL_USERNAME='matea.zadar95@gmail.com'
 MAIL_PASSWORD='lopticaskocica1'
 FLASK_DEBUG=1
 MS_TRANSLATOR_KEY='af0b113076c848d4b0ce583c8acd503c'
+ELASTICSEARCH_URL=http://localhost:9200
